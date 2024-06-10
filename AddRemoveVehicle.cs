@@ -96,11 +96,11 @@ namespace Cmpt291UI
             SqlConnection con = new SqlConnection(addVehicleDBForm);
             con.Open();
 
-            cmd = new SqlCommand("INSERT INTO car values('" + addCarVINtxt.Text + "'," +
-                " '" + addCarTypeIDtxt.Text + "'," +
-                " '" + addCarBrandtxt.Text + "', " +
-                " '" + addCarModeltxt.Text + "'," +
-                " '" + addCarYeartxt.Text + "'," +
+            cmd = new SqlCommand("INSERT INTO car values('" + searchCarVINtxt.Text + "'," +
+                " '" + searchCarTypeIDtxt.Text + "'," +
+                " '" + searchCarBrandtxt.Text + "', " +
+                " '" + searchCarModeltxt.Text + "'," +
+                " '" + searchCarYeartxt.Text + "'," +
                 " '" + addCarColortxt.Text + "'," +
                 " '" + addCarMileagetxt.Text + "'," +
                 " '" + addCarLastTuneUptxt.Text + "'," +
@@ -229,11 +229,11 @@ namespace Cmpt291UI
 
         private void addCarClearButton_Click(object sender, EventArgs e)
         {
-            addCarVINtxt.Clear();
-            addCarTypeIDtxt.Clear();
-            addCarBrandtxt.Clear();
-            addCarModeltxt.Clear();
-            addCarYeartxt.Clear();
+            searchCarVINtxt.Clear();
+            searchCarTypeIDtxt.Clear();
+            searchCarBrandtxt.Clear();
+            searchCarModeltxt.Clear();
+            searchCarYeartxt.Clear();
             addCarColortxt.Clear();
             addCarMileagetxt.Clear();
             addCarLastTuneUptxt.Clear();
@@ -253,6 +253,11 @@ namespace Cmpt291UI
             searchCarLastTuneUptxt.Clear();
             searchCarConditiontxt.Clear();
             searchCarBranchLocationtxt.Clear();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

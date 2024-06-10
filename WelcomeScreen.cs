@@ -14,7 +14,7 @@ namespace Cmpt291UI
 {
     public partial class LoginScreen : Form
     {
-        public static string databasePath = "Data Source=DESKTOP-SG96S0F;Initial Catalog=cmpt291;Integrated Security=True;Encrypt=False";
+        public static string databasePath = "Data Source=DESKTOP-3PU7T29;Initial Catalog=CMPT291;Integrated Security=True;Encrypt=False";
         public static string employeeLoggedIn;
 
         public LoginScreen()
@@ -32,7 +32,7 @@ namespace Cmpt291UI
             try
             {
                 SqlConnection conn = new SqlConnection(databasePath);
-                String query = "SELECT * FROM Employees where employeeNum = '"+employeeNumBox.Text+"' AND password = '"+ passwordBox.Text+"'";
+                String query = "SELECT * FROM Employees where EmployeeNum = '"+employeeNumBox.Text+"' AND password = '"+ passwordBox.Text+"'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, conn);
 
                 DataTable dtable = new DataTable();
@@ -115,6 +115,16 @@ namespace Cmpt291UI
             this.Hide();
             conn.Dispose();
             conn.Close();
+        }
+
+        private void passwordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Welcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

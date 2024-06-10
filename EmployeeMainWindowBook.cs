@@ -19,7 +19,7 @@ namespace Cmpt291UI
         public EmployeeMainWindowBook()
         {
             InitializeComponent();
-            textBox13.Text = employeeLoggedInForm2;
+            richTextBox13.Text = employeeLoggedInForm2;
 
             // connect to database
             SqlConnection con = new SqlConnection(dbForm2);
@@ -33,7 +33,7 @@ namespace Cmpt291UI
             DataTable dtable = new DataTable();
             adapter.Fill(dtable);
 
-            textBox1.Text = dtable.ToString();
+            richTextBox1.Text = dtable.ToString();
 
             con.Close();
         }
@@ -276,10 +276,11 @@ namespace Cmpt291UI
 
         private void ClearBottomButton_Click(object sender, EventArgs e)
         {
-            textBox12.Clear();
-            textBox13.Clear();
-            textBox15.Clear();
-            textBox16.Clear();
+            richTextBox12.Clear();
+            richTextBox13.Clear();
+            // Debug
+            //richTextBox15.Clear();
+            //richTextBox16.Clear();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

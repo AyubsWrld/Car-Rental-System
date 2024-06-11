@@ -99,6 +99,18 @@ namespace Cmpt291UI
             DisplayCarDetails(currentCarIndex);
         }
 
-   
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Login goBack = new Login();
+            this.Hide(); 
+            goBack.Show();  
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            TransactionPaymentWindow paymentWindow = new TransactionPaymentWindow();    
+            paymentWindow.Show();       
+            this.Hide();
+        }
     }
 }
